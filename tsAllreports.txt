@@ -1,0 +1,40 @@
+1.audio-player
+    total complexity:347
+    function count:232
+    average count:1.4956896551724137
+2.Baka-Youtube-to-MP3-Converter
+    total complexity:23
+    function count:20
+    average count:1.15
+3.dodger
+    total complexity:39
+    function count:28
+    average count:1.3928571428571428
+4.messenger_caprin
+    total complexity:363
+    function count:185
+    average count:1.962162162162162
+5.pully(youtube downloader)    
+    total complexity:271
+    function count:145
+    average count:1.8689655172413793
+6.shareIt
+    total complexity:218
+    function count:162
+    average count:1.345679012345679
+7.Tetris.ts    
+    total complexity:130
+    function count:77
+    average count:1.6883116883116882
+8.video-player
+    total complexity:347
+    function count:232
+    average count:1.4956896551724137
+9.connect4
+    total complexity:41
+    function count:37
+    average count:1.1081081081081081
+10.gomoku-wasm
+    total complexity:202
+    function count:113
+    average count:1.7876106194690264

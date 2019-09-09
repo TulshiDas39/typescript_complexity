@@ -1,0 +1,32 @@
+1.downloader:
+    total complexity:18
+    function count:10
+    average count:1.8
+2.electron-player:
+    total complexity:162
+    function count:98
+    average count:1.653061224489796
+3.JS_Tetris
+    total complexity:321
+    function count:204
+    average count:1.5735294117647058
+4.mario-dodger
+    total complexity:2352
+    function count:1124
+    average count:2.092526690391459
+5.messenger
+    total complexity:967
+    function count:429
+    average count:2.254079254079254
+6.MusicPlayer
+    total complexity:500
+    function count:214
+    average count:2.336448598130841
+7.shareit
+    total complexity:967
+    function count:429
+    average count:2.254079254079254
+8.youtubeMate
+    total complexity:10
+    function count:8
+    average count:1.25
