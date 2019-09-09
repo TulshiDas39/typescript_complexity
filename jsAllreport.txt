@@ -30,3 +30,11 @@
     total complexity:10
     function count:8
     average count:1.25
+9.connect-four
+    total complexity:46
+    function count:19
+    average count:2.4210526315789473
+10.gomoku
+    total complexity:184
+    function count:64
+    average count:2.875

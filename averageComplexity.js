@@ -44,4 +44,5 @@ var AverageComplexity = /** @class */ (function () {
     return AverageComplexity;
 }());
 var aComplexity = new AverageComplexity();
-aComplexity.calculateAverageComplexity('./tsreports/gomoku-wasm.txt');
+//aComplexity.calculateAverageComplexity('./tsreports/gomoku-wasm.txt');
+aComplexity.calculateAverageComplexity('./jsreports/gomoku.txt');

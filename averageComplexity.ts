@@ -51,4 +51,5 @@ class AverageComplexity {
 }
 
 let aComplexity = new AverageComplexity();
-aComplexity.calculateAverageComplexity('./tsreports/gomoku-wasm.txt');
+//aComplexity.calculateAverageComplexity('./tsreports/gomoku-wasm.txt');
+aComplexity.calculateAverageComplexity('./jsreports/gomoku.txt');

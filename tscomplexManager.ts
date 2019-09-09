@@ -47,8 +47,8 @@ class TS_Complex {
 }
 
 let tscomlexManager = new TS_Complex();
-tscomlexManager.fromDir('../typescript/gomoku-wasm', 'ts');
-//tscomlexManager.fromDir('../javascript/electron-player', 'js');
+//tscomlexManager.fromDir('../typescript/gomoku-wasm', 'ts');
+tscomlexManager.fromDir('../javascript/gomoku', 'js');
 tscomlexManager.prntfiles();
 tscomlexManager.calculateTSComplexity();
 
