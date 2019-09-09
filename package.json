@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "escomplex": "^2.0.0-alpha",
+    "esprima": "^4.0.1",
     "ts-complex": "^1.0.0"
   }
 }
