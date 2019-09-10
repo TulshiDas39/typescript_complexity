@@ -32,7 +32,7 @@ class AverageComplexity {
     private extractNumber(content: string, position: number) {
         let numberStr = "";
         let firstDigitFound = false;
-        position += 3;
+//        position += 3;
         do {
             if (content[position].match(/\d/)) {
                 if(!firstDigitFound)firstDigitFound = true;

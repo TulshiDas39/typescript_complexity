@@ -30,7 +30,7 @@ var AverageComplexity = /** @class */ (function () {
     AverageComplexity.prototype.extractNumber = function (content, position) {
         var numberStr = "";
         var firstDigitFound = false;
-        position += 3;
+        //        position += 3;
         do {
             if (content[position].match(/\d/)) {
                 if (!firstDigitFound)
