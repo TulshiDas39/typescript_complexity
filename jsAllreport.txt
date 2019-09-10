@@ -2,39 +2,69 @@
     total complexity:18
     function count:10
     average count:1.8
-2.electron-player:
+    NOS:82
+    NOC:14
+    ROC:14.58%
+2.electron-player(video player):
     total complexity:162
     function count:98
     average count:1.653061224489796
+    NOS:828
+    NOC:77
+    ROC:8.5%
 3.JS_Tetris
     total complexity:321
     function count:204
     average count:1.5735294117647058
+    NOS:1480,
+    NOC:247
+    ROC:15%;
 4.mario-dodger
     total complexity:2352
     function count:1124
     average count:2.092526690391459
+    NOS:10,409
+    NOC:7,136
+    ROC:40%
 5.messenger
     total complexity:967
     function count:429
     average count:2.254079254079254
+    NOS:2,751
+    NOC:829
+    ROC:23%;
 6.MusicPlayer
     total complexity:500
     function count:214
     average count:2.336448598130841
+    NOS:433
+    NOC:42
+    ROC:8%;
 7.shareit
     total complexity:967
     function count:429
     average count:2.254079254079254
+    NOS:3487
+    NOC:820
+    ROC: 19%;
 8.youtubeMate
     total complexity:10
     function count:8
     average count:1.25
+    NOS:69
+    NOC:23
+    ROC:25%;
 9.connect-four
     total complexity:46
     function count:19
     average count:2.4210526315789473
+    NOS:309
+    NOC:98
+    ROC: 24%;
 10.gomoku
     total complexity:184
     function count:64
     average count:2.875
+    NOS:920
+    NOC:23
+    ROC: 2.4%;

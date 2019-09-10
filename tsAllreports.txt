@@ -2,39 +2,69 @@
     total complexity:347
     function count:232
     average count:1.4956896551724137
+    NOS:1,739
+    NOC:610
+    ROC(Ratio of comment): 25%;
 2.Baka-Youtube-to-MP3-Converter
     total complexity:23
     function count:20
     average count:1.15
+    NOS:169
+    NOC:69
+    ROC:28%;
 3.dodger
     total complexity:39
     function count:28
     average count:1.3928571428571428
+    NOS:7245
+    NOC:13
+    ROC:0.17%;
 4.messenger_caprin
     total complexity:363
     function count:185
     average count:1.962162162162162
+    NOS:2362
+    NOC:493
+    ROC:17%;
 5.pully(youtube downloader)    
     total complexity:271
     function count:145
     average count:1.8689655172413793
+    NOS:1224
+    NOC:177
+    ROC:12.6%;
 6.shareIt
     total complexity:218
     function count:162
     average count:1.345679012345679
+    NOS:1322
+    NOC:169
+    ROC:11%
 7.Tetris.ts    
     total complexity:130
     function count:77
     average count:1.6883116883116882
+    NOS:645
+    NOC:42
+    ROC:6.1%
 8.video-player
     total complexity:347
     function count:232
     average count:1.4956896551724137
+    NOS:456
+    NOC:93
+    ROC:16.9%;
 9.connect4
     total complexity:41
     function count:37
     average count:1.1081081081081081
+    NOS:518
+    NOC:4
+    ROC:0.76%
 10.gomoku-wasm
     total complexity:202
     function count:113
     average count:1.7876106194690264
+    NOS:1050
+    NOC:97
+    ROC:8.4%
