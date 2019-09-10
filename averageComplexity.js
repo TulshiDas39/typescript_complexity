@@ -29,13 +29,19 @@ var AverageComplexity = /** @class */ (function () {
     };
     AverageComplexity.prototype.extractNumber = function (content, position) {
         var numberStr = "";
+        var firstDigitFound = false;
         position += 3;
         do {
-            numberStr += content.charAt(position);
+            if (content[position].match(/\d/)) {
+                if (!firstDigitFound)
+                    firstDigitFound = true;
+                numberStr += content[position];
+            }
+            else if (firstDigitFound)
+                break;
             position++;
-        } while (' \t\n\r\v,}'.indexOf(content[position]) < 0);
-        var num = parseInt(numberStr, 10);
-        return num;
+        } while (true);
+        return parseInt(numberStr, 10);
     };
     AverageComplexity.prototype.getContent = function (path) {
         var contents = fs.readFileSync(path, 'utf8');
@@ -45,4 +51,4 @@ var AverageComplexity = /** @class */ (function () {
 }());
 var aComplexity = new AverageComplexity();
 //aComplexity.calculateAverageComplexity('./tsreports/gomoku-wasm.txt');
-aComplexity.calculateAverageComplexity('./jsreports/gomoku.txt');
+aComplexity.calculateAverageComplexity('./jsreports/connect-four.txt');
