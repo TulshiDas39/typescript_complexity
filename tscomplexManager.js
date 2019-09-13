@@ -13,7 +13,6 @@ var TS_Complex = /** @class */ (function () {
             return;
         }
         var files = fs.readdirSync(startPath);
-        // console.log(files);
         for (var i = 0; i < files.length; i++) {
             var filename = path.join(startPath, files[i]);
             var stat = fs.lstatSync(filename);
@@ -38,8 +37,6 @@ var TS_Complex = /** @class */ (function () {
         for (var i = 0; i < this.filelist.length; i++) {
             complexity = tscomplex.calculateCyclomaticComplexity(this.filelist[i].path);
             complexityOfFiles[i] = complexity;
-            // console.log(Object.keys(complexity).map(function (key) { return complexity[key] }));
-            //console.log(complexity);
         }
         return complexityOfFiles;
     };
@@ -64,8 +61,6 @@ var TS_Complex = /** @class */ (function () {
             var sumFileComplex = this.calculateSum(values);
             avComplex += sumFileComplex;
             functionCount += values.length;
-            if (values.length !== 0)
-                console.log('complexity of file:' + sumFileComplex / values.length);
         }
         console.log('sum:' + avComplex);
         avComplex /= functionCount;
@@ -74,9 +69,15 @@ var TS_Complex = /** @class */ (function () {
     TS_Complex.prototype.calculateMaintainibiltyOfFile = function (path) {
         var maintainability = tscomplex.calculateMaintainability(path);
         console.log(maintainability);
+        return maintainability;
     };
-    TS_Complex.prototype.calculateMaintainibilityOfProject = function (path, projectType) {
-        this.fromDir(path, projectType);
+    TS_Complex.prototype.calculateMaintainibilityOfProject = function () {
+        var avrMaintainablility = 0;
+        for (var i = 0; i < this.filelist.length; i++) {
+            avrMaintainablility += this.calculateMaintainibiltyOfFile(this.filelist[i].path).averageMaintainability;
+        }
+        avrMaintainablility /= this.filelist.length;
+        console.log('Average maintainablity of project:' + avrMaintainablility);
     };
     return TS_Complex;
 }());
@@ -84,5 +85,6 @@ var tscomlexManager = new TS_Complex();
 //tscomlexManager.fromDir('../typescript/gomoku-wasm', 'ts');
 tscomlexManager.fromDir('../javascript/gomoku', 'js');
 //tscomlexManager.prntfiles();
-tscomlexManager.calculateAverageComplexityOfProject();
+//tscomlexManager.calculateAverageComplexityOfProject();
 //tscomlexManager.calculateMaintainibiltyOfFile('averageComplexity.ts');
+tscomlexManager.calculateMaintainibilityOfProject();
