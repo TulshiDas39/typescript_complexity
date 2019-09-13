@@ -6,6 +6,11 @@ interface path {
     path: string;
 }
 
+interface maintainability {
+    averageMaintainability: number;
+    minMaintainability: number;
+}
+
 class TS_Complex {
 
     private filelist: path[] = [];
@@ -35,13 +40,58 @@ class TS_Complex {
         }
     }
 
-    public calculateTSComplexity() {
+    public calculateComplexityOfFiles():Object[] {
         let complexity = {};
+        let complexityOfFiles:Object[] = [];
         for (let i = 0; i < this.filelist.length; i++) {
             complexity = tscomplex.calculateCyclomaticComplexity(this.filelist[i].path);
-            console.log(complexity);
+            complexityOfFiles[i] = complexity;
+           // console.log(Object.keys(complexity).map(function (key) { return complexity[key] }));
+            //console.log(complexity);
         }
 
+        return complexityOfFiles;
+
+    }
+
+    private calculateSum(data:number[]){
+        let sum = 0;
+        console.log('items:');
+        data.forEach(item=>{
+            console.log(item);
+            sum+=item;
+        })
+        return sum;
+    }
+
+    private getValues(data:Object){
+        return Object.keys(data).map(function (key) { return data[key] as number });
+    }
+
+    public calculateAverageComplexityOfProject(){
+        let data = this.calculateComplexityOfFiles();
+        let avComplex = 0;
+        let functionCount = 0;
+        for(let i = 0;i<data.length;i++){
+            let values = this.getValues(data[i]);
+            let sumFileComplex = this.calculateSum(values);
+            avComplex += sumFileComplex;
+            functionCount+=values.length;
+        }
+        console.log('sum:'+avComplex);
+        avComplex /= functionCount;
+
+        console.log(avComplex);
+
+    }
+
+    public calculateMaintainibiltyOfFile(path: string) {
+        const maintainability = tscomplex.calculateMaintainability(path) as maintainability;
+        console.log(maintainability);
+    }
+
+    public calculateMaintainibilityOfProject(path: string, projectType: string) {
+        this.fromDir(path, projectType);
     }
 
 }
@@ -49,7 +99,8 @@ class TS_Complex {
 let tscomlexManager = new TS_Complex();
 //tscomlexManager.fromDir('../typescript/gomoku-wasm', 'ts');
 tscomlexManager.fromDir('../javascript/gomoku', 'js');
-tscomlexManager.prntfiles();
-tscomlexManager.calculateTSComplexity();
+//tscomlexManager.prntfiles();
+tscomlexManager.calculateAverageComplexityOfProject();
+//tscomlexManager.calculateMaintainibiltyOfFile('averageComplexity.ts');
 
 

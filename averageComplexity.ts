@@ -7,9 +7,6 @@ class AverageComplexity {
     public calculateAverageComplexity(path: string) {
         let contents = this.getContent(path);
         this.calculate(contents, 0);
-
-        //console.log(contents);
-
     }
 
     private calculate(content: string, position: number) {
