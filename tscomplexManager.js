@@ -68,6 +68,7 @@ var TS_Complex = /** @class */ (function () {
     };
     TS_Complex.prototype.calculateMaintainibiltyOfFile = function (path) {
         var maintainability = tscomplex.calculateMaintainability(path);
+        console.log(path);
         console.log(maintainability);
         return maintainability;
     };
@@ -82,8 +83,8 @@ var TS_Complex = /** @class */ (function () {
     return TS_Complex;
 }());
 var tscomlexManager = new TS_Complex();
-//tscomlexManager.fromDir('../typescript/gomoku-wasm', 'ts');
-tscomlexManager.fromDir('../javascript/gomoku', 'js');
+tscomlexManager.fromDir('../typescript/video-player', 'ts');
+//tscomlexManager.fromDir('../javascript/Youtube-Mate', 'js');
 //tscomlexManager.prntfiles();
 //tscomlexManager.calculateAverageComplexityOfProject();
 //tscomlexManager.calculateMaintainibiltyOfFile('averageComplexity.ts');

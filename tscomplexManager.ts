@@ -86,6 +86,7 @@ class TS_Complex {
 
     public calculateMaintainibiltyOfFile(path: string) {
         const maintainability = tscomplex.calculateMaintainability(path) as maintainability;
+        console.log(path);
         console.log(maintainability);
         return maintainability;
     }
@@ -102,8 +103,8 @@ class TS_Complex {
 }
 
 let tscomlexManager = new TS_Complex();
-//tscomlexManager.fromDir('../typescript/gomoku-wasm', 'ts');
-tscomlexManager.fromDir('../javascript/gomoku', 'js');
+tscomlexManager.fromDir('../typescript/video-player', 'ts');
+//tscomlexManager.fromDir('../javascript/Youtube-Mate', 'js');
 //tscomlexManager.prntfiles();
 //tscomlexManager.calculateAverageComplexityOfProject();
 //tscomlexManager.calculateMaintainibiltyOfFile('averageComplexity.ts');
